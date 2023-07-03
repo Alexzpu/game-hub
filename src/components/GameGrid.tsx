@@ -13,7 +13,6 @@ const GameGrid = ({ selectedGenre }: Props) => {
   const { data, error, isLoading } = useGames(selectedGenre);
 
   const skeletons = [];
-  // var array = [];
   for (let i = 1; i < 18; i++) {
     skeletons[i - 1] = i;
   }
