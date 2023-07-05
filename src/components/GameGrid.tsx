@@ -11,11 +11,12 @@ interface Props {
 
 const GameGrid = ({ gameQuery }: Props) => {
   const { data, error, isLoading } = useGames(gameQuery);
-
   const skeletons = [];
   for (let i = 1; i < 18; i++) {
     skeletons[i - 1] = i;
   }
+
+  if (error) return <Text>{error}</Text>;
 
   return (
     <>
